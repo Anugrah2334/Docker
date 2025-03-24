@@ -2,9 +2,9 @@
 
 This guide explains how to deploy a microservices architecture using Docker Swarm with an API Gateway and a Backend Service.
 
-<p align="center">
-  <img src="https://github.com/TarakKatoch/My-Docker-Dockyard/raw/6aa77085daae451d6bd1df2cc3d12c78998797b3/Microservices%20Architecture%20using%20Docker%20Swarm/assets/docker-to-swarm-1.png" alt="Docker to Swarm" width="300" />
-</p>
+
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/docker-swarm.png)
+
 
 
 ## 🚀 Step 1: Install Docker & Initialize Docker Swarm
@@ -14,6 +14,7 @@ Ensure Docker is installed on your machine. Verify with:
 ```sh
 docker --version
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot1.png)
 If not installed, download it from Docker's official site and install it.
 
 **Note:** Docker Desktop should be running in the background for Docker Swarm to work properly.
@@ -23,11 +24,8 @@ Start Docker Swarm:
 ```sh
 docker swarm init
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot2.png)
 This makes your machine the Swarm Manager.
-
-<p align="center">
-  <img src="https://github.com/TarakKatoch/My-Docker-Dockyard/raw/6608dac43e01c02694a65abaaeb704b9cb618708/Microservices%20Architecture%20using%20Docker%20Swarm/assets/Screenshot%202025-03-19%20015611.png" alt="Project Screenshot" />
-</p>
 
 ## 📁 Project Structure
 ```
@@ -98,12 +96,15 @@ CMD ["python", "api_gateway.py"]
 ```sh
 docker build -t backend-service ./backend-service
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot3.png)
 ```sh
 docker build -t api-gateway ./api-gateway
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot4.png)
 ```sh
 docker images
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot5.png)
 
 ## 📜 Step 4: Create Docker Compose File for Swarm
 Create `docker-compose.yml`:
@@ -144,60 +145,59 @@ networks:
 ```sh
 docker stack deploy -c docker-compose.yml my_microservices
 ```
-<p align="center">
-  <img src="https://github.com/TarakKatoch/My-Docker-Dockyard/raw/1f2c3564c5332d4c1df541e133a6ffe858f5c3e5/Microservices%20Architecture%20using%20Docker%20Swarm/assets/Screenshot%202025-03-19%20015836.png" alt="Project Screenshot 2" />
-</p>
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot6.png)
 
 ## 📊 Step 6: Verify the Deployment
 ```sh
 docker stack services my_microservices
 ```
-<p align="center">
-  <img src="https://github.com/TarakKatoch/My-Docker-Dockyard/raw/1f2c3564c5332d4c1df541e133a6ffe858f5c3e5/Microservices%20Architecture%20using%20Docker%20Swarm/assets/Screenshot%202025-03-19%20015857.png" alt="Project Screenshot 3" />
-</p>
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot7.png)
 
 ```sh
 docker ps
 ```
-<p align="center">
-  <img src="https://github.com/TarakKatoch/My-Docker-Dockyard/raw/1f2c3564c5332d4c1df541e133a6ffe858f5c3e5/Microservices%20Architecture%20using%20Docker%20Swarm/assets/Screenshot%202025-03-19%20015912.png" alt="Project Screenshot 4" />
-</p>
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot8.png)
 
 ## 🌐 Step 7: Access the Microservices
 Open your browser and go to:
 ```sh
 http://localhost:8080
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot9.png)
 You should see: **API Gateway: rajput_tarakk**
 
-<p align="center">
-  <img src="https://github.com/TarakKatoch/My-Docker-Dockyard/raw/d470c6d6dac0fd0010f139168e48e4086da874f4/Microservices%20Architecture%20using%20Docker%20Swarm/assets/Screenshot%202025-03-19%20015446.png" alt="Project Screenshot" />
-</p>
+
 
 ## 🔄 Step 8: Scaling the Services
 ```sh
 docker service scale my_microservices_backend-service=5
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot10.png)
 ```sh
 docker stack services my_microservices
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot11.png)
 
 ## 🛠 Step 9: Updating the Services
 Rebuild and update the backend service:
 ```sh
 docker build -t backend-service ./backend-service
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot12.png)
 ```sh
 docker service update --image backend-service:latest my_microservices_backend-service
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot13.png)
 
 ## 🛑 Step 10: Remove the Stack
 ```sh
 docker stack rm my_microservices
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot14.png)
 ```sh
 docker swarm leave --force
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Architecture%20using%20Docker%20Swarm/Screenshot15.png)
 
 ---
 This guide helps you deploy a microservices architecture using Docker Swarm. 🚀
