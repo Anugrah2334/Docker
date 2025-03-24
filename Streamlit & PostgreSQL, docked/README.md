@@ -34,7 +34,7 @@ This network allows PostgreSQL and the Streamlit app to communicate.
 
 ### Step 3: Run the PostgreSQL Container
 ```sh
-docker run --name my_postgres_container --network my_postgres_network -e POSTGRES_USER=tarak -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=testdb -p 5432:5432 -d postgres
+docker run --name my_postgres_container --network my_postgres_network -e POSTGRES_USER=anugrah -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=testdb -p 5432:5432 -d postgres
 ```
 ![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Streamlit%20%26%20PostgreSQL%2C%20docked/Screenshot3.png)
 This starts a PostgreSQL container with authentication settings.
@@ -44,7 +44,7 @@ This starts a PostgreSQL container with authentication settings.
 ## 📊 Creating and Populating the Database
 ### Step 4: Access PostgreSQL
 ```sh
-docker exec -it my_postgres_container psql -U tarak -d testdb
+docker exec -it my_postgres_container psql -U anugrah -d testdb
 ```
 ![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Streamlit%20%26%20PostgreSQL%2C%20docked/Screenshot4.png)
 
