@@ -23,17 +23,20 @@ Streamlit-Postgres-Docker/
 ```sh
 docker pull postgres
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Streamlit%20%26%20PostgreSQL%2C%20docked/Screenshot1.png)
 
 ### Step 2: Create a Docker Network
 ```sh
 docker network create my_postgres_network
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Streamlit%20%26%20PostgreSQL%2C%20docked/Screenshot2.png)
 This network allows PostgreSQL and the Streamlit app to communicate.
 
 ### Step 3: Run the PostgreSQL Container
 ```sh
 docker run --name my_postgres_container --network my_postgres_network -e POSTGRES_USER=tarak -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=testdb -p 5432:5432 -d postgres
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Streamlit%20%26%20PostgreSQL%2C%20docked/Screenshot3.png)
 This starts a PostgreSQL container with authentication settings.
 
 ---
@@ -43,6 +46,7 @@ This starts a PostgreSQL container with authentication settings.
 ```sh
 docker exec -it my_postgres_container psql -U tarak -d testdb
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Streamlit%20%26%20PostgreSQL%2C%20docked/Screenshot4.png)
 
 ### Step 5: Create the `passengers` Table
 ```sql
@@ -90,11 +94,13 @@ CMD ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.
 ```sh
 docker build -t streamlit_app .
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Streamlit%20%26%20PostgreSQL%2C%20docked/Screenshot5.png)
 
 ### Step 9: Run the Streamlit Container
 ```sh
 docker run --name my_streamlit_container --network my_postgres_network -p 8501:8501 -d streamlit_app
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Streamlit%20%26%20PostgreSQL%2C%20docked/Screenshot6.png)
 This ensures that the Streamlit app can communicate with PostgreSQL.
 
 ---
@@ -102,7 +108,7 @@ This ensures that the Streamlit app can communicate with PostgreSQL.
 ## 🔗 Access the Application
 Open a browser and navigate to:
 👉 **[http://localhost:8501](http://localhost:8501)**
-
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Streamlit%20%26%20PostgreSQL%2C%20docked/Screenshot7.png)
 You should see the list of passengers displayed in the app.
 
 ---
