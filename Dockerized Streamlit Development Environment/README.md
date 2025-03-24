@@ -69,19 +69,23 @@ plotly
 ```sh
 cd path/to/project_root
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Dockerized%20Streamlit%20Development%20Environment/Screenshot1.png)
 
 2️⃣ Build the Docker image:
 ```sh
 docker build -t streamlit-app .
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Dockerized%20Streamlit%20Development%20Environment/Screenshot2.png)
 
 3️⃣ Run the container:
 ```sh
 docker run -p 8501:8501 streamlit-app
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Dockerized%20Streamlit%20Development%20Environment/Screenshot3.png)
 
 4️⃣ Open in Browser: Go to [http://localhost:8501](http://localhost:8501) 🌐
 
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Dockerized%20Streamlit%20Development%20Environment/Screenshot4.png)
 ---
 
 ## 🎯 Conclusion
