@@ -36,6 +36,7 @@ First, start your Minikube cluster:
 ```bash
 minikube start
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Orchestration%20with%20Minikube%20%26%20Kubernetes/images/Screenshot%202025-03-21%20014343.png)
 
 ### 2. Set Up Docker Environment
 
@@ -63,6 +64,7 @@ docker build -t backend-service .
 ```bash
 kubectl apply -f ../kubernetes/backend-service.yaml
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Orchestration%20with%20Minikube%20%26%20Kubernetes/images/Screenshot%202025-03-21%20014834.png)
 
 #### 3.2 API Gateway
 
@@ -80,6 +82,8 @@ docker build -t api-gateway .
 ```bash
 kubectl apply -f ../kubernetes/api-gateway.yaml
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Orchestration%20with%20Minikube%20%26%20Kubernetes/images/Screenshot%202025-03-21%20015036.png)
+
 
 ### 4. Verify Deployment
 
@@ -89,6 +93,7 @@ Check the status of your deployments:
 kubectl get deployments
 kubectl get services
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Orchestration%20with%20Minikube%20%26%20Kubernetes/images/Screenshot%202025-03-21%20020054.png)
 
 ### 5. Access the Application
 
@@ -99,6 +104,10 @@ minikube service api-gateway
 ```
 
 This will open your browser to the API Gateway endpoint, which will display a message from the backend service.
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Orchestration%20with%20Minikube%20%26%20Kubernetes/images/Screenshot%202025-03-21%20015902.png)
+
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Orchestration%20with%20Minikube%20%26%20Kubernetes/images/Screenshot%202025-03-21%20020139.png)
+
 
 ### 6. Monitoring and Debugging
 
@@ -127,6 +136,8 @@ kubectl delete -f kubernetes/backend-service.yaml
 # Stop Minikube
 minikube stop
 ```
+![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Microservices%20Orchestration%20with%20Minikube%20%26%20Kubernetes/images/Screenshot%202025-03-21%20020704.png)
+
 
 ## Architecture Overview
 
