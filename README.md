@@ -42,13 +42,23 @@ Welcome to **My-Docker-Dockyard**! 🌊 This repository is my personal **dockyar
 
 ### 10. [Microservices Architecture using Docker Swarm ⚓](https://github.com/Anugrah2334/Docker/tree/main/Microservices%20Architecture%20using%20Docker%20Swarm)  
 - **Goal:** Deploy a **microservices-based application** using Docker Swarm for **scalability and reliability**.  
-- **Key Focus:** Load balancing, service discovery, and distributed applications.  
+- **Key Focus:** Load balancing, service discovery, and distributed applications.
 
-### 11. [Running a Streamlit App in Docker on AWS EC2 ☁️](Nil)  
+### 13. [Jenkins Orchestration 🤵](https://github.com/Anugrah2334/Jenkins-Orchestration)  
+- **Goal:** This project demonstrates a **simple Python application** with a complete **CI/CD pipeline** using **Jenkins, Docker, and GitHub**.  
+- **Key Focus:**  
+  - Automating builds and deployments using **Jenkins pipelines**.  
+  - **Containerizing** a Python application using Docker.  
+  - Running **automated tests** before deployment.  
+  - Enabling **Continuous Integration and Continuous Deployment (CI/CD)** workflows.  
+- **Overview:**  
+  The application provides a **command-line tool** that adds two numbers together. The pipeline ensures **code quality and reliability** by running automated tests before pushing the final image to a container registry.   
+
+### 12. [Running a Streamlit App in Docker on AWS EC2 ☁️](Nil)  
 - **Goal:** Deploy a **Streamlit application** inside a Docker container on an **AWS EC2 instance**.  
 - **Key Focus:** Cloud deployment, networking, and containerized application hosting.  
 
-### 12. [Bakery Foundation Example on Windows 🍞](Nil)  
+### 13. [Bakery Foundation Example on Windows 🍞](Nil)  
 - **Goal:** Set up **Packer** on Windows to create a **custom Amazon Machine Image (AMI)** with Python 3.9.  
 - **Key Focus:** Image automation, AWS infrastructure provisioning, and hands-on cloud deployment.  
 
