@@ -116,8 +116,6 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
      - Enter branch specifier: `*/main`
      - Click "Save"
 
-<div align="center">
-  <img src="hhttps://github.com/Anugrah2334/Docker/blob/main/Jenkins-Orchestration/images/Screenshot10.png" alt="Create pipeline 1">
 
   <img src="https://github.com/Anugrah2334/Docker/blob/main/Jenkins-Orchestration/images/Screenshot11.png" alt="Create pipeline 2">
 
