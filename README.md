@@ -54,9 +54,7 @@ Welcome to **My-Docker-Dockyard**! 🌊 This repository is my personal **dockyar
 - **Overview:**  
   The application provides a **command-line tool** that adds two numbers together. The pipeline ensures **code quality and reliability** by running automated tests before pushing the final image to a container registry.   
 
-### 12. [Running a Streamlit App in Docker on AWS EC2 ☁️](Nil)  
-- **Goal:** Deploy a **Streamlit application** inside a Docker container on an **AWS EC2 instance**.  
-- **Key Focus:** Cloud deployment, networking, and containerized application hosting.  
+
 
 
 
