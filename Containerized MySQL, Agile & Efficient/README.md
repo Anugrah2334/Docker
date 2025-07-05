@@ -117,7 +117,7 @@ SHOW DATABASES;
 🔄 Switch to the `Anugrah` database:
 
 ```sql
-USE Tarak;
+USE Anugrah;
 ```
 ![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Containerized%20MySQL%2C%20Agile%20%26%20Efficient/Screenshot5.png)
 
